@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pannellum</title>
+    <link rel="shortcut icon" href="#"/>
+    <link type="text/css" rel="stylesheet" href="../css/pannellum.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/standalone.css"/>
+    <link type="text/css" rel="stylesheet" href="../plugins/layui/css/layui.css"/>
+</head>
+
+<body>
+
+<div id="container">
+
+    <div id="map">
+        <img src="../images/school/map.png" border="0" usemap="#schoolmap" title="南昌大学"/>
+        <map name="schoolmap" id="schoolmap">
+            <area shape="circle" coords="30,38,18" href="#" title="主教"/>
+            <area shape="rect" coords="18,82,46,110" href="#" title="法学院"/>
+            <area shape="circle" coords="72,5,15" href="#" title="商业街"/>
+            <area shape="circle" coords="92,96,15" href="#" title="艺术楼"/>
+            <area shape="circle" coords="30,166,15" href="#" title="办公楼"/>
+            <area shape="circle" coords="115,10,15" href="#" title="学生公寓"/>
+            <area shape="circle" coords="135,28,15" href="#" title="游泳馆"/>
+            <area shape="circle" coords="155,75,20" href="#" title="体育场"/>
+            <area shape="rect" coords="140,115,170,140" href="#" title="体育馆"/>
+        </map>
+    </div>
+
+    <div class="nav">
+    </div>
+
+    <div id="controls">
+        <div class="ctrl" id="pan-up">&#9650;</div>
+        <div class="ctrl" id="pan-down">&#9660;</div>
+        <div class="ctrl" id="pan-left">&#9664;</div>
+        <div class="ctrl" id="pan-right">&#9654;</div>
+        <div class="ctrl" id="zoom-in">&plus;</div>
+        <div class="ctrl" id="zoom-out">&minus;</div>
+        <div class="ctrl" id="fullscreen">&#x2922;</div>
+    </div>
+
+    <div id="coords">
+        <div>
+            水平偏移：<span id="yaw"></span>
+        </div>
+        <div>
+            垂直偏移：<span id="pitch"></span>
+        </div>
+    </div>
+
+    <div id="vr">
+        <span>VR</span>
+    </div>
+</div>
+
+<script type="text/javascript" src="../js/libpannellum.js"></script>
+<script type="text/javascript" src="../js/RequestAnimationFrame.js"></script>
+<script type="text/javascript" src="../js/pannellum.js"></script>
+<script type="text/javascript" src="../plugins/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="../plugins/layui/layui.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/scene.js"></script>
+<script>
+
+    /*var config = {
+        "default":{
+            "author":"Liu Liang",
+            "firstScene":"firstScene",
+            "sceneFadeDuration":"2000",
+            "autoLoad": true,
+            "hotSpotDebug":true,
+            "compass":true
+        },
+        "scenes":{
+            "firstScene":{
+                "title":"firstScene",
+                "panorama":"../images/cafe/cafe.jpg",
+                "yaw": 20,
+                "pitch": 10,
+                "hotSpots":[
+                    {
+                        "pitch":"-12",
+                        "yaw":"-10",
+                        "targetSceneId":"secondScene",
+                        "text":"点击前往第二个场景.",
+                        "cssClass":"custom-common scene",
+                        "id":"hot2",
+                        "targetYaw": 'same',
+                        "targetPitch": 'same',
+                        "targetHfov": 120,
+                        "clickHandlerFunc": clickHandler,
+                        "clickHandlerArgs": "this is a custom clickhandler",
+                    },
+                    {
+                        "pitch":"12",
+                        "yaw":"0",
+                        "text":"this is a tooltip",
+                        "cssClass":"custom-common text",
+                    },
+                    {
+                        "pitch":12,
+                        "yaw":10,
+                        "image":"../images/school/1.jpg",
+                        "width": "400",
+                        "height": "200",
+                        "cssClass":"custom-common image"
+                    },
+                    {
+                        "pitch": 24,
+                        "yaw": 20,
+                        "cssClass":"custom-common url",
+                        "createTooltipFunc": tooltip,//自定义提示框信息
+                        "createTooltipArgs": "this is a custom tooltip",
+                    }
+                ]
+            },
+            "secondScene":{
+                "title":"secondScene",
+                "panorama":"../images/infantil/infantil.jpg",
+                "hotSpots":[{
+                    "pitch":0,
+                    "yaw":10,
+                    "type": "scene",
+                    "text":"前往第一个场景",
+                    "targetSceneId":"firstScene",
+                    "id": "hot2"
+                }]
+            }
+        }
+    }*/
+
+    function tooltip(hotSpotDiv, args) {
+        hotSpotDiv.classList.add('custom-tooltip');
+        var span = document.createElement('span');
+        span.innerHTML = args;
+        hotSpotDiv.appendChild(span);
+        span.style.width = span.scrollWidth - 20 + 'px';
+        span.style.marginLeft = -(span.scrollWidth - hotSpotDiv.offsetWidth) / 2 + 'px';
+        span.style.marginTop = -span.scrollHeight - 12 + 'px';
+    }
+
+    function clickHandler(event, args) {
+    }
+
+    //viewer = pannellum.viewer("container",config);
+</script>
+
+
+</body>
+</html>

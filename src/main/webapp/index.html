@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VR漫游系统</title>
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" type="text/css" href="plugins/bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link type="text/css" rel="stylesheet" href="plugins/layui/css/layui.css">
+    <script src="plugins/jquery-3.3.1.js"></script>
+    <script src="plugins/bootstrap/bootstrap.js"></script>
+    <script src="plugins/layui/layui.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body onkeydown="keyLogin();">
+
+    <header>
+        <div class="head_left">
+            <img src="images/logo.svg">
+            <h2>VR漫游系统</h2>
+        </div>
+        <div class="head_right">
+            <img src="images/set.svg">
+            <span></span>
+            <ul>
+                <li value="1">退出登录</li>
+                <li value="2">修改密码</li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="left">
+        <div id="firstpane" class="menu_list">
+
+            <div class="menu_head">
+                <span>场景</span>
+                <img src="images/wander.svg">
+            </div>
+            <div class="menu_body">
+                <a id="init" href="#">初始配置</a>
+                <a id="wander" href="#">场景漫游</a>
+                <a id="control" href="#">清除控制</a>
+            </div>
+
+            <div class="menu_head">
+                <span>热点</span>
+                <img src="images/label.svg">
+            </div>
+            <div class="menu_body">
+                <a id="add" href="#">添加热点</a>
+                <a id="delete" href="#">删除热点</a>
+                <a id="move" href="#">编辑热点</a>
+            </div>
+
+            <div class="menu_head">
+                <span>管理</span>
+                <img src="images/manage.svg">
+            </div>
+            <div class="menu_body">
+                <a id='search_scene' href="#">场景管理</a>
+                <a id='search_hot' href="#">热点管理</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="right">
+        <iframe id="content" width="100%" height="100%" allowfullscreen src="html/pannellum.html"></iframe>
+        </iframe>
+
+        <iframe id="table1" width="100%" height="100%" src="html/sceneManage.html" style="display: none"></iframe>
+
+        <iframe id="table2" width="100%" height="100%" src="html/hotManage.html" style="display: none"></iframe>
+
+        <iframe id="vr" width="100%" height="100%" src="html/vr.html" style="display: none"></iframe>
+    </div>
+<script>
+</script>
+</body>
+</html>

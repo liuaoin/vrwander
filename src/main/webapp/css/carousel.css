@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    margin: 0 auto;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #4e555b;
+}
+
+.school {
+    position: absolute;
+    top: 20px;
+    left: 26px;
+    width: 180px;
+    height: 180px;
+    transform: rotate(-12deg);
+}
+.school img {
+    width: 160px;
+    height: 120px;
+}
+.coords {
+    position: absolute;
+    top: 35px;
+    right: 8px;
+    width: 200px;
+}
+
+.coords span {
+    font-size: 14px;
+}
+.coords input {
+    height: 20px;
+    line-height: 20px;
+}
+.coords select {
+    height: 20px;
+    line-height: 20px;
+}
+.coords #sceneName {
+    height: 24px;
+    line-height: 24px;
+    width: 175px;
+}
+.box {
+    position: absolute;
+    border: 1px solid #2a6495;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 780px;
+    height: 90px;
+}
+
+.prev, .next {
+    position: relative;
+    display: inline-block;
+    width: 26px;
+    height: 100%;
+}
+
+.next {
+    top: 0;
+    right: 0;
+}
+
+.prev img, .next img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 16px;
+    height: 40px;
+    margin-top: -25px;
+    margin-left: -8px;
+    cursor: pointer;
+}
+
+.lists {
+    display: inline-block;
+    list-style: none;
+}
+
+.list {
+    float: left;
+    padding: 10px;
+}
+
+.list img:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px #52718A;
+}
+
+.texts {
+    display: inline-block;
+    position: absolute;
+    bottom: 20px;
+    width: 100px;
+    height: 20px;
+    color: #fff;
+    transform: translateX(-78px);
+    z-index: 1;
+    cursor: pointer;
+}

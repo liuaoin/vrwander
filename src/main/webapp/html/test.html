@@ -1,0 +1,112 @@
+<!--
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pannellum</title>
+    <link rel="shortcut icon" href="#"/>
+    <link type="text/css" rel="stylesheet" href="../css/pannellum.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/standalone.css"/>
+    <style>
+        #compass {
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="container">
+
+    <div id="controls">
+        <div class="ctrl" id="pan-up">&#9650;</div>
+        <div class="ctrl" id="pan-down">&#9660;</div>
+        <div class="ctrl" id="pan-left">&#9664;</div>
+        <div class="ctrl" id="pan-right">&#9654;</div>
+        <div class="ctrl" id="zoom-in">&plus;</div>
+        <div class="ctrl" id="zoom-out">&minus;</div>
+        <div class="ctrl" id="fullscreen">&#x2922;</div>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="../js/libpannellum.js"></script>
+<script type="text/javascript" src="../js/RequestAnimationFrame.js"></script>
+<script type="text/javascript" src="../js/pannellum.js"></script>
+<script type="text/javascript" src="../plugins/jquery-3.3.1.js"></script>
+<script>
+    var config = {
+        "default":{
+            "author":"Liu Liang",
+            "firstScene":"firstScene",
+            "sceneFadeDuration":"2000",
+            "autoLoad": true,
+            "hotSpotDebug":true,
+            "compass":true,
+        },
+        "scenes":{
+            "firstScene":{
+                "title":"firstScene",
+                "panorama":"../images/school/1.jpg",
+                "yaw": 0,
+                "pitch": 0,
+                "northOffset": -90,
+                "hotSpots":[
+                    {
+                        "pitch":"0",
+                        "yaw":"20",
+                        "targetSceneId":"secondScene",
+                        "text":"点击前往第二个场景.",
+                        "cssClass":"custom-common scene",
+                        "id":"hot2",
+                        "targetYaw": 'sameAzimuth',
+                        "targetPitch": 0,
+                        "targetHfov": 120,
+                    },
+                    {
+                        "pitch":"12",
+                        "yaw":"0",
+                        "text":"this is a tooltip",
+                        "cssClass":"custom-common text",
+                    },
+                    {
+                        "pitch":12,
+                        "yaw":10,
+                        "image":"../images/school/thumb/2.jpg",
+                        "width": "400",
+                        "height": "200",
+                        "cssClass":"custom-common image"
+                    },
+                    {
+                        "pitch": 24,
+                        "yaw": 20,
+                        "cssClass":"custom-common url",
+                    }
+                ]
+            },
+            "secondScene":{
+                "title":"secondScene",
+                "panorama":"../images/school/2.jpg",
+                "hotSpots":[{
+                    "pitch":0,
+                    "yaw":10,
+                    "type": "scene",
+                    "text":"前往第一个场景",
+                    "targetSceneId":"firstScene",
+                    "id": "hot2"
+                }]
+            }
+        }
+    }
+    viewer = pannellum.viewer("container",config);
+</script>
+
+
+</body>
+</html>
+-->

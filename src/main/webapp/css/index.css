@@ -1,0 +1,160 @@
+* {
+    padding : 0;
+    margin: 0;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+/*header start*/
+header {
+    position:relative;
+    width: 100%;
+    height: 12%;
+    background-color: #888f92;
+    font-family: "Microsoft YaHei UI";
+}
+.head_left {
+    position:absolute;
+    width:30%;
+    height:100%;
+}
+.head_left img {
+    position:relative;
+    left:16%;
+    top:20%;
+    width:50px;
+    height:50px;
+}
+.head_left h2 {
+    position: relative;
+    left: 20%;
+    top:30%;
+    display: inline-block;
+    color: #e2dfea;
+}
+.head_right {
+    position:absolute;
+    right:0;
+    top:0;
+    width:30%;
+    height: 100%;
+}
+.head_right span {
+    position:absolute;
+    left:60%;
+    top:45%;
+    font-size:16px;
+    text-decoration: underline;
+    cursor:pointer;
+}
+.head_right img {
+    position:absolute;
+    left:73%;
+    top:45%;
+    width:20px;
+    height:20px;
+}
+.head_right ul {
+    display: none;
+    position:absolute;
+    list-style: none;
+    left:60%;
+    top:75%;
+    width:80px;
+    z-index: 10;
+    border:1px solid #e0d8d8;
+    border-radius: 2px;
+}
+.head_right ul li {
+    background: #e4e9ef;
+    line-height: 30px;
+    padding-left: 11px;
+}
+.head_right ul li:hover {
+    cursor:pointer;
+    background: #a5b7ff;
+}
+/*header end*/
+
+/*left start*/
+.left {
+    position: absolute;
+    width: 15%;
+    height: 88%;
+    background-color: #aaa5b3;
+}
+.menu_list {
+    width: 100%;
+    margin: 0 auto;
+}
+.menu_head {
+    height: 47px;
+    line-height: 47px;
+    cursor: pointer;
+    border-left: 1px solid #e1e1e1;
+    border-right: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    border-top: 1px solid #f1f1f1;
+    position: relative;
+    margin: 0;
+    background: #f1f1f1;
+}
+.menu_head span {
+    margin-left:42%;
+    font-size: 16px;
+    color: #525252;
+    font-weight: bold;
+}
+.menu_body {
+    line-height: 38px;
+    border-left: 1px solid #e1e1e1;
+    background: #fff;
+    border-right: 1px solid #e1e1e1;
+}
+.menu_body a {
+    display: block;
+    height: 38px;
+    line-height: 38px;
+    padding-left: 33%;
+    color: #777;
+    background: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #e1e1e1;
+}
+.menu_head img {
+    position:absolute;
+    width: 25px;
+    height: 25px;
+    left: 18%;
+    top: 25%;
+}
+div.menu_head:hover {
+    background: #a5b7ff;
+    /*#a5b7aa*/
+}
+.menu_body a:hover {
+    text-decoration: none;
+    background: #3fe3c6;
+}
+.current {
+    background: #a5b7ff;
+}
+/*left start*/
+
+/*right start*/
+.right {
+    position: absolute;
+    left: 15%;
+    width: 85%;
+    height: 88%;
+}
+
+.map {
+    position: absolute;
+    right: 0px;
+    top: 12%;
+    width: 10%;
+    height: 20%;
+}
+/*right end*/

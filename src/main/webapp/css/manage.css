@@ -1,0 +1,72 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+html {
+    background-color: #f6f8f9;
+}
+.search {
+    display: inline-block;
+    margin: 10px;
+}
+
+.search_condition {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.search_condition span {
+    font-size: 18px;
+}
+
+.search_condition input {
+    line-height: 20px;
+    height: 20px;
+    padding-left: 5px;
+    width: 120px;
+}
+.search_condition select {
+    line-height: 24px;
+    height: 24px;
+    width: 125px;
+}
+.operate {
+    display: inline-block;
+    margin-left: 50px;
+}
+.operate input {
+    width: 72px;
+    height: 28px;
+    border: 1px solid #C9C9C9;
+    border-radius: 3px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+#search {
+    background-color: #FFB800;
+}
+#reset {
+    background-color: #1E9FFF;
+}
+#add {
+    background-color: #009688;
+}
+
+.table {
+    margin: 20px auto;
+    width: 95%;
+    height: 90%;
+    border: 1px solid #dfe3f3;
+}
+
+#pageText {
+    float: right;
+}
+
+#deleteSelect {
+    float: right;
+    margin-top: 16px;
+    margin-right: 20px;
+    text-decoration: underline;
+}

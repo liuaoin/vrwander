@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../css/manage.css">
+    <link rel="stylesheet" type="text/css" href="../plugins/layui/css/layui.css">
+    <script type="text/javascript" src="../plugins/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../plugins/layui/layui.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/hotManage.js"></script>
+</head>
+<body>
+<div class="table">
+    <div class="search">
+        <div class="search_condition">
+            <span>热点名称：</span>
+            <input id="name" type="text" value="全部">
+        </div>
+        <div class="search_condition">
+            <span>热点类型：</span>
+            <select id="type">
+                <option value="scene">场景热点</option>
+                <option value="text">文本热点</option>
+                <option value="url">链接热点</option>
+                <option value="image">图片热点</option>
+                <option value="video">音频热点</option>
+                <option selected>全部</option>
+            </select>
+        </div>
+        <div class="search_condition">
+            <span>添加时间：</span>
+            <input id="time" type="text">
+        </div>
+    </div>
+    <div class="operate">
+        <input id='search' type="button" value="查询">
+        <input id='reset' type="reset" value="重置">
+    </div>
+    <div class="area">
+        <table class="layui-table">
+            <thead>
+            <tr>
+                <th width="6%"><input id='checkAll'type="checkbox"></th>
+                <th width="8%">热点编号</th>
+                <th width="10%">热点名称</th>
+                <th width="12%">水平偏移</th>
+                <th width="12%">垂直偏移</th>
+                <th width="10%">热点类型</th>
+                <th width="10%">当前场景</th>
+                <th width="10%">目标场景</th>
+                <th width="10%">添加时间</th>
+                <th width="12%">操作栏</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div id="pageText">
+    </div>
+    <div id="deleteSelect">
+        <a href="#">删除选中数据</a>
+    </div>
+</div>
+</body>
+</html>
